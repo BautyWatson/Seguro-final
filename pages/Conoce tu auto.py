@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from PIL import Image
 
-image3 = Image.open(r"C:\Users\Alfredo BTP\OneDrive\Documentos\riesgos\logokeva-removebg-preview.png")
+image3 = Image.open("logokeva-removebg-preview.png")
 st.set_page_config(page_title='KEVA-seguros', page_icon=image3)
 @st.experimental_memo
 def get_img_as_base64(file):
@@ -11,7 +11,7 @@ def get_img_as_base64(file):
     return base64.b64encode(data).decode()
 
 
-img = get_img_as_base64(r"C:\Users\Alfredo BTP\OneDrive\Documentos\riesgos\lateral22.jpg")
+img = get_img_as_base64("lateral22.jpg")
 
 page_bg_img = f"""
 <style>
@@ -38,7 +38,7 @@ import PIL
 import PIL.Image
 import tensorflow as tf
 import pathlib
-data_dir = pathlib.Path(r'C:\Users\Alfredo BTP\Henry Data Science\Grupal\dataset drive\Riesgo-poliza-seguro\streamlit\Modelo\Detectar autos')
+data_dir = pathlib.Path('Detectar autos')
 image_count = len(list(data_dir.glob('*/*.jpg')))
 batch_size = 32
 img_height = 180
